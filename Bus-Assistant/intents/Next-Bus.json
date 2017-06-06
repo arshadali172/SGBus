@@ -1,0 +1,237 @@
+{
+  "userSays": [
+    {
+      "id": "bd501f93-262c-4d51-a562-1b9cb433fd48",
+      "data": [
+        {
+          "text": "bus "
+        },
+        {
+          "text": "401",
+          "alias": "bus-no",
+          "meta": "@sys.number",
+          "userDefined": false
+        },
+        {
+          "text": " at bus stop "
+        },
+        {
+          "text": "83139",
+          "alias": "bus-stop-id",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "38254c0a-05ba-46a0-bbb4-5e54d2cbda76",
+      "data": [
+        {
+          "text": "bus "
+        },
+        {
+          "text": "135",
+          "alias": "bus-no",
+          "meta": "@sys.number",
+          "userDefined": false
+        },
+        {
+          "text": " and "
+        },
+        {
+          "text": "134",
+          "alias": "bus-no",
+          "meta": "@sys.number",
+          "userDefined": false
+        },
+        {
+          "text": " at bus stop "
+        },
+        {
+          "text": "83139",
+          "alias": "bus-stop-id",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "89c31517-9d38-4486-b59a-865401e76dc6",
+      "data": [
+        {
+          "text": "Update me on bus "
+        },
+        {
+          "text": "76",
+          "alias": "bus-no",
+          "meta": "@sys.number",
+          "userDefined": false
+        },
+        {
+          "text": " and "
+        },
+        {
+          "text": "197",
+          "alias": "bus-no",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " at bus stop "
+        },
+        {
+          "text": "83139",
+          "alias": "bus-stop-id",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "1664f71b-1fb8-4c2e-b78e-7a739855e7f6",
+      "data": [
+        {
+          "text": "Update me on bus "
+        },
+        {
+          "text": "10",
+          "alias": "bus-no",
+          "meta": "@sys.number",
+          "userDefined": false
+        },
+        {
+          "text": ", "
+        },
+        {
+          "text": "32",
+          "alias": "bus-no",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " and "
+        },
+        {
+          "text": "40",
+          "alias": "bus-no",
+          "meta": "@sys.number",
+          "userDefined": false
+        },
+        {
+          "text": " at bus stop "
+        },
+        {
+          "text": "83139",
+          "alias": "bus-stop-id",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "1ce5e2d1-9052-47a0-99ba-29b047f462a1",
+      "data": [
+        {
+          "text": "Update me on bus "
+        },
+        {
+          "text": "10",
+          "alias": "bus-no",
+          "meta": "@sys.number",
+          "userDefined": false
+        },
+        {
+          "text": " at bus stop "
+        },
+        {
+          "text": "83139",
+          "alias": "bus-stop-id",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "28e6b38c-78a7-4c14-8000-eb16cb2c94ee",
+      "data": [
+        {
+          "text": "Update me on bus stop "
+        },
+        {
+          "text": "83139",
+          "alias": "bus-stop-id",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "df1262ce-f659-4212-aa6f-988ccb4c1b25",
+      "data": [
+        {
+          "text": "bus stop "
+        },
+        {
+          "text": "40359",
+          "alias": "bus-stop-id",
+          "meta": "@sys.phone-number",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "e37ee974-e821-4363-bb9c-abc9e66fb08b",
+  "name": "Next-Bus",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "nextBusUpdate",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "required": true,
+          "dataType": "@sys.phone-number",
+          "name": "bus-stop-id",
+          "value": "$bus-stop-id",
+          "prompts": [
+            "Sorry what was the bus stop id again?"
+          ],
+          "isList": false
+        },
+        {
+          "dataType": "@sys.number",
+          "name": "bus-no",
+          "value": "$bus-no",
+          "isList": true
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "I did not catch that. Could you say that again?"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}
